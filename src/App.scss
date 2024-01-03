@@ -1,0 +1,27 @@
+.numbers-in-computer {
+  padding: 10px;
+  .bits {
+    display: inline-flex;
+    border: 1px solid #000;
+    .bit {
+      padding: 5px;
+      border-right: 1px solid #000;
+      &:last-child {
+        border-right: none;
+      }
+    }
+    .exponent-bit {
+      background-color: #A6FFB1;
+    }
+    .placeholder-bit {
+      display: none;
+    }
+    .mantissa-bit {
+      background-color: #F9B3B3;
+    }
+  }
+  .number-ipt-wrapper {
+    display: block;
+    margin-top: 10px;
+  }
+}
