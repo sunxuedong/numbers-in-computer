@@ -59,11 +59,13 @@ export const decimal2Binary = (decNumber: number) => {
     return { signBit, exponentBits: patchedExponentBits, mantissaBits: patchedMantissaBits };
 };
 
+let key = 0;
+
 export const getBitsDom = ({ bits = "", className = "" } = {}) => {
     const domList = [];
     
     for (let i = 0; i < bits.length; i++) {
-        domList.push(<div className={`bit ${className}`}>{bits[i]}</div>)
+        domList.push(<div className={`bit ${className}`} key={key++}>{bits[i]}</div>)
     }
 
     return domList;
